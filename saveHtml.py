@@ -9,10 +9,7 @@ def saveUrl(urlIncomming):
     response = requests.get(url)
     dateAndtime = str(time.strftime("%d%m%y_%H%M%S"))
   
-    #Hier wird die Hauptseite in einem Cacheorder gespeichert. Zudem wir einem .txt file die angelegten Filenamen gespeichert. Trennungzeichen zwischen den Namen ist ein ";"
-
-    #Brauch ich um Ordner anzulegen   
-        
+    #Hier wird die Hauptseite in einem Cacheorder gespeichert. Zudem wir einem .txt file die angelegten Filenamen gespeichert. Trennungzeichen zwischen den Namen ist ein ";"   
     if not os.path.exists("./cache"):
         cacheDir = os.mkdir("./cache")
        
@@ -34,8 +31,6 @@ def saveUrl(urlIncomming):
     with open (filecache,"w") as file:
         file.write(str(found_text))
         file.close()
-        # print(dateAndtime + ".txt")
- 
     
     with open(filelist,"a") as file:
         file.write(str(dateAndtime+".txt\n"))

@@ -1,10 +1,8 @@
-def keywordfinder(keyword):
+def readFiles(path):
+    import os
+    readFile = os.listdir(path)
+
     filelist = "./cache/"+"filelist.txt"
     
-    fooList = []
-    with open (filelist, "r"):
-        for char in filelist:
-            char = ";"
-            
-
+    print (readFile)
 
